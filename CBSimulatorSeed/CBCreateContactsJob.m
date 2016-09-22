@@ -33,12 +33,7 @@
   if (! mutableValues) mutableValues = [[RHMutableMultiStringValue alloc] initWithType:kABMultiStringPropertyType];
   if (label==nil) {
     label = [@[RHPersonPhoneMobileLabel,
-             RHPersonPhoneIPhoneLabel,
-             RHPersonPhoneMainLabel,
-             RHPersonPhoneHomeFAXLabel,
-             RHPersonPhoneWorkFAXLabel,
-             RHPersonPhoneOtherFAXLabel,
-             RHPersonPhonePagerLabel] objectAtIndex:arc4random()%7];
+             RHPersonPhoneIPhoneLabel] objectAtIndex:arc4random()%2];
   }
   [mutableValues addValue:phone withLabel:label];
   self.phoneNumbers = mutableValues;
